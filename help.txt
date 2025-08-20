@@ -1,0 +1,78 @@
+==================== Codeforces C++ STL Cheat Sheet ====================
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <set>
+#include <map>
+#include <cmath>
+
+Common Macros and Typedefs:
+#define all(x) (x).begin(), (x).end()
+#define pb push_back
+#define pii pair<int,int>
+#define vi vector<int>
+#define vpi vector<pii>
+#define fi first
+#define se second
+#define sz(x) ((int)(x).size())
+
+Fast I/O (put inside main()):
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+
+---------------- Containers ----------------
+vector<T> - dynamic array
+string - sequence of chars
+set<T>, unordered_set<T> - sorted/hash unique elements
+map<K,V>, unordered_map<K,V> - sorted/hash key-value maps
+queue<T>, priority_queue<T> - FIFO and max-heap
+stack<T> - LIFO stack
+
+---------------- Common Algorithms ----------------
+sort(all(v));                   // sort vector or array
+reverse(all(v));                // reverse elements
+auto it = lower_bound(all(v), x);  // first element >= x (binary search)
+auto it = upper_bound(all(v), x);  // first element > x (binary search)
+v.erase(unique(all(v)), v.end());   // remove consecutive duplicates (after sorting)
+auto max_it = max_element(all(fv));  // iterator to max element
+auto min_it = min_element(all(v));  // iterator to min element
+int sum = accumulate(all(v), 0);    // sum of elements
+
+---------------- Bit Tricks ----------------
+__builtin_popcount(x)        // count 1 bits in int (32-bit)
+__builtin_popcountll(x)      // count 1 bits in long long (64-bit)
+__builtin_ctz(x)             // count trailing zeros
+__builtin_clz(x)             // count leading zeros
+
+---------------- Math Helpers ----------------
+int g = __gcd(a, b);
+int l = (a / g) * b;
+
+long long mod_exp(long long base, long long exp, long long mod) {
+    long long result = 1;
+    base %= mod;
+    while (exp > 0) {
+        if (exp & 1) result = (result * base) % mod;
+        base = (base * base) % mod;
+        exp >>= 1;
+    }
+    return result;
+}
+
+---------------- Debugging ----------------
+#define debug(x) cerr << #x << " = " << (x) << '\n';
+
+---------------- Sample Vector Usage ----------------
+vector<int> v = {1, 2, 3};
+v.pb(4);
+sort(all(v));
+for (int x : v) cout << x << " ";
+
+---------------- Input Reading ----------------
+int n; cin >> n;
+vector<int> arr(n);
+for (int &x : arr) cin >> x;
+cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+========================================================================

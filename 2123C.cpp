@@ -10,7 +10,6 @@
 #include <cmath>
 #include <numeric>
 #define all(x) (x).begin(), (x).end()
-#define pb push_back
 #define pii pair<int, int>
 #define vi vector<int>
 #define vpi vector<pii>

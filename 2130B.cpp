@@ -47,8 +47,6 @@ void solve()
         }
     }
     int sum=ones+2*twos;
-    debug(sum);
-    debug(s);
     if (sum>s){
          for (int &x : arr){
             cout<<x<<" ";

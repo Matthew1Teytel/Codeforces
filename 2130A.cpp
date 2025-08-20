@@ -36,6 +36,7 @@ void solve()
             count+=arr[i];
         }
     }
+    cout<<count<<endl;
    
 }
 

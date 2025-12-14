@@ -1,0 +1,63 @@
+Niko is playing a game. Her score is denoted by an integer 𝑘
+ which is 0
+ initially.
+
+The game has 𝑛
+ turns. On the 𝑖
+-th turn, Niko is given a red card with an integer 𝑎𝑖
+ on it, as well as a blue card with an integer 𝑏𝑖
+ on it. She must choose exactly one of the cards and update her score according to her choice:
+
+If she chooses the red card, her score becomes 𝑘−𝑎𝑖
+, where 𝑘
+ is her score before the turn.
+If she chooses the blue card, her score becomes 𝑏𝑖−𝑘
+, where 𝑘
+ is her score before the turn.
+After this, the game proceeds to the next turn, or ends if it is the 𝑛
+-th turn.
+
+Your task is to find the maximum possible score Niko can obtain at the end of the game.
+
+Input
+Each test contains multiple test cases. The first line contains the number of test cases 𝑡
+ (1≤𝑡≤103
+). The description of the test cases follows.
+
+The first line of each test case contains a single integer 𝑛
+ (1≤𝑛≤105
+) — the number of turns.
+
+The second line of each test case contains 𝑛
+ integers 𝑎1,𝑎2,…,𝑎𝑛
+ (−109≤𝑎𝑖≤109
+).
+
+The third line of each test case contains 𝑛
+ integers 𝑏1,𝑏2,…,𝑏𝑛
+ (−109≤𝑏𝑖≤109
+).
+
+It is guaranteed that the sum of 𝑛
+ over all test cases does not exceed 105
+.
+
+Output
+For each test case, output a single integer — the maximum possible score Niko can obtain at the end of the game.
+
+Example
+InputCopy
+3
+3
+4 -8 -1
+-3 -7 0
+5
+-3 1 0 7 1
+-5 3 -1 4 -5
+5
+-7 7 5 4 9
+-9 -3 3 2 2
+OutputCopy
+6
+12
+27

@@ -1,0 +1,62 @@
+You have 𝑛
+ classes today, which are numbered from 1
+ to 𝑛
+.
+
+The classes are described by a binary string∗
+ 𝑠
+ of length 𝑛
+. We call class 𝑖
+ important if and only if 𝑠𝑖=𝟷
+. For each important class, you must stay awake and listen to it.
+
+You are very tired and wish to sleep through as many classes as possible. However, falling asleep takes time. If you listen to an important class 𝑖
+, then you cannot fall asleep for the next 𝑘
+ classes, i.e., you must also stay awake in classes 𝑖+1,𝑖+2,…,𝑖+𝑘
+ (or until the end of the day, if fewer than 𝑘
+ classes remain).
+
+For classes that are not important, you may sleep through them unless the rule above forces you to stay awake.
+
+Your task is to find out the maximum number of classes you can sleep through today.
+
+∗
+A binary string is a string where each character is either 𝟶
+ or 𝟷
+.
+
+Input
+Each test contains multiple test cases. The first line contains the number of test cases 𝑡
+ (1≤𝑡≤500
+). The description of the test cases follows.
+
+The first line of each test case contains two integers 𝑛
+ and 𝑘
+ (1≤𝑛,𝑘≤100
+).
+
+The second line of each test case contains the string 𝑠
+ of length 𝑛
+ (𝑠𝑖=𝟶
+ or 𝟷
+).
+
+Output
+For each test case, output a single integer — the maximum number of classes you can sleep through today.
+
+Example
+InputCopy
+4
+4 1
+1001
+3 3
+000
+3 1
+001
+8 2
+01000101
+OutputCopy
+1
+3
+2
+2
